@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Privacy Policy | Cloda</title>
+    <link rel="icon" href="icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="icon.png">
+    <style>
+        :root {
+            --bg:       #F5F5F5;
+            --surface:  #FFFFFF;
+            --ink:      #111111;
+            --muted:    #999999;
+            --border:   #E8E8E8;
+            --input:    #F0F0F0;
+            --sienna:   #B2653B;
+            --amber:    #BA8530;
+            --safe-area-top:    env(safe-area-inset-top, 20px);
+            --safe-area-bottom: env(safe-area-inset-bottom, 20px);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+                         "Hiragino Kaku Gothic ProN", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--ink);
+            line-height: 1.7;
+            padding: var(--safe-area-top) 0 var(--safe-area-bottom) 0;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 32px 20px 72px;
+        }
+
+        /* ── Header ─────────────────────────────────── */
+        header {
+            text-align: center;
+            margin-bottom: 28px;
+            padding-top: 16px;
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            margin: 0 auto 16px;
+            display: block;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+        }
+
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: var(--ink);
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 13px;
+            color: var(--muted);
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .link-back {
+            display: inline-block;
+            font-size: 14px;
+            color: var(--sienna);
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 4px;
+            transition: opacity 0.2s;
+        }
+
+        .link-back:hover { opacity: 0.65; }
+
+        /* ── Language Toggle ─────────────────────────── */
+        .lang-toggle-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 28px;
+        }
+
+        .lang-toggle {
+            display: flex;
+            background: var(--input);
+            border-radius: 20px;
+            padding: 4px;
+            position: relative;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            padding: 7px 20px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--muted);
+            border-radius: 16px;
+            cursor: pointer;
+            z-index: 1;
+            transition: color 0.25s ease;
+            font-family: inherit;
+            letter-spacing: 0.1px;
+        }
+
+        .lang-btn.active { color: var(--surface); }
+
+        .lang-slider {
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            height: calc(100% - 8px);
+            width: calc(50% - 4px);
+            background: var(--ink);
+            border-radius: 16px;
+            transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            z-index: 0;
+        }
+
+        /* ── Card ────────────────────────────────────── */
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 36px 28px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        /* ── Content ─────────────────────────────────── */
+        .content-section {
+            margin-bottom: 36px;
+        }
+
+        .content-section:last-child { margin-bottom: 0; }
+
+        h2 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 14px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+            letter-spacing: -0.1px;
+        }
+
+        p {
+            font-size: 14px;
+            margin-bottom: 14px;
+            color: var(--ink);
+            line-height: 1.8;
+        }
+
+        p:last-child { margin-bottom: 0; }
+
+        ul {
+            list-style: none;
+            margin-bottom: 14px;
+        }
+
+        li {
+            font-size: 14px;
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            color: var(--ink);
+            line-height: 1.75;
+        }
+
+        li::before {
+            content: "•";
+            color: var(--sienna);
+            font-size: 18px;
+            position: absolute;
+            left: 4px;
+            top: -2px;
+        }
+
+        li:last-child { margin-bottom: 0; }
+
+        strong { font-weight: 600; }
+
+        a {
+            color: var(--sienna);
+            text-decoration: none;
+        }
+
+        a:hover { opacity: 0.7; }
+
+        .highlight {
+            background: #FAF5F2;
+            border: 1px solid rgba(178, 101, 59, 0.15);
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin-top: 14px;
+            font-size: 14px;
+        }
+
+        /* ── Footer ──────────────────────────────────── */
+        .footer-note {
+            text-align: center;
+            margin-top: 36px;
+            font-size: 12px;
+            color: var(--muted);
+            letter-spacing: 0.2px;
+        }
+
+        /* ── Language CSS ────────────────────────────── */
+        body [lang="en"] { display: none; }
+        html.lang-en body [lang="ja"] { display: none; }
+        html.lang-en body [lang="en"] { display: block; }
+        html.lang-en body span[lang="en"] { display: inline; }
+
+        html.lang-ja .lang-slider { transform: translateX(0); }
+        html.lang-en .lang-slider { transform: translateX(100%); }
+
+        /* ── Mobile ──────────────────────────────────── */
+        @media (max-width: 600px) {
+            .container { padding: 24px 16px 56px; }
+            .card { padding: 24px 18px; border-radius: 16px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 15px; }
+            p, li { font-size: 14px; }
+        }
+    </style>
+</head>
+<body class="lang-ja">
+<div class="container">
+
+    <header>
+        <img src="icon.png" alt="Cloda Icon" class="app-icon">
+        <h1>
+            <span lang="ja">プライバシーポリシー</span>
+            <span lang="en">Privacy Policy</span>
+        </h1>
+        <div class="subtitle">
+            <span lang="ja">最終更新日：2026年5月6日</span>
+            <span lang="en">Last Updated: May 6, 2026</span>
+        </div>
+        <a href="terms.html" class="link-back">
+            <span lang="ja">→ 利用規約はこちら</span>
+            <span lang="en">→ View Terms of Use</span>
+        </a>
+    </header>
+
+    <div class="lang-toggle-container">
+        <div class="lang-toggle">
+            <div class="lang-slider"></div>
+            <button class="lang-btn active" onclick="setLang('ja')" id="btn-ja">日本語</button>
+            <button class="lang-btn" onclick="setLang('en')" id="btn-en">English</button>
+        </div>
+    </div>
+
+    <div class="card">
+
+        <!-- ── Japanese ── -->
+        <div lang="ja">
+
+            <div class="content-section">
+                <p>
+                    TNLiner（以下「開発者」）は、iOSアプリ「Cloda」（以下「本アプリ」）におけるユーザーのプライバシーを最大限尊重します。本ポリシーは、本アプリが扱う情報の内容・利用目的・保管方法について説明します。
+                </p>
+                <p>
+                    <strong>本アプリはユーザーの個人データを外部サーバーへ送信しません。すべてのデータはお使いのデバイス内にのみ保存されます。</strong>
+                </p>
+            </div>
+
+            <div class="content-section">
+                <h2>1. 取り扱う情報について</h2>
+                <p>本アプリが扱う情報は以下のとおりです。</p>
+                <ul>
+                    <li><strong>衣服・アイテム情報：</strong>名称・カテゴリ・色・素材・シーズンなどの属性データ</li>
+                    <li><strong>衣服の画像：</strong>ユーザーが撮影またはライブラリから選択した写真</li>
+                    <li><strong>コーディネート履歴・お気に入り：</strong>作成したコーデの記録</li>
+                    <li><strong>アプリ設定：</strong>表示言語・テーマ・通知設定など</li>
+                </ul>
+                <p>これらの情報はすべて、SwiftDataによりデバイス内にのみ保存されます。</p>
+            </div>
+
+            <div class="content-section">
+                <h2>2. 外部への情報送信について</h2>
+                <p>本アプリは以下の情報を外部に送信しません。</p>
+                <ul>
+                    <li>氏名・メールアドレス・電話番号などの個人を特定できる情報</li>
+                    <li>位置情報</li>
+                    <li>デバイス識別情報（広告IDなど）</li>
+                    <li>衣服画像・コーディネートデータ</li>
+                </ul>
+                <p>本アプリは、広告ネットワーク・アナリティクスサービス・第三者トラッキングツールを一切使用していません。</p>
+            </div>
+
+            <div class="content-section">
+                <h2>3. カメラ・写真ライブラリへのアクセス</h2>
+                <p>
+                    本アプリは衣服の画像を登録するためにカメラおよびフォトライブラリへのアクセス許可を求める場合があります。取得した画像はデバイス内にのみ保存され、外部へ送信されることはありません。アクセス許可はiOSの設定アプリからいつでも変更できます。
+                </p>
+            </div>
+
+            <div class="content-section">
+                <h2>4. データの保管と削除</h2>
+                <p>
+                    本アプリ内のすべてのデータはデバイスにローカル保存されます。アプリをアンインストールすることで、すべてのデータが完全に削除されます。開発者はユーザーのデータにアクセスする手段を持ちません。
+                </p>
+            </div>
+
+            <div class="content-section">
+                <h2>5. iCloudバックアップ</h2>
+                <p>
+                    本アプリのデータはiOSの標準バックアップ機能（iCloud Backup）の対象となる場合があります。iCloudへのバックアップ設定はiOSの設定アプリから管理できます。iCloudに保存されたデータはAppleのプライバシーポリシーに従って管理されます。
+                </p>
+            </div>
+
+            <div class="content-section">
+                <h2>6. お子様のプライバシー</h2>
+                <p>
+                    本アプリは13歳未満のお子様を対象としたサービスではありません。13歳未満のお子様の個人情報を意図して収集することはありません。
+                </p>
+            </div>
+
+            <div class="content-section">
+                <h2>7. 本ポリシーの変更</h2>
+                <p>
+                    本プライバシーポリシーは予告なく変更される場合があります。重要な変更がある場合は、アプリのアップデートまたは本ページへの掲載をもってお知らせします。
+                </p>
+            </div>
+
+            <div class="content-section">
+                <h2>8. お問い合わせ</h2>
+                <p>プライバシーに関するご質問・ご意見は下記までお問い合わせください。</p>
+                <ul>
+                    <li><strong>開発者：</strong>TNLiner</li>
+                    <li><strong>メールアドレス：</strong><a href="mailto:tnliner.support@gmail.com">tnliner.support@gmail.com</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- ── English ── -->
+        <div lang="en">
+
+            <div class="content-section">
+                <p>
+                    TNLiner ("the Developer") is committed to protecting your privacy when you use the iOS app "Cloda" ("the App"). This Privacy Policy explains what information the App handles, how it is used, and how it is stored.
+                </p>
+                <p>
+                    <strong>Cloda does not transmit any personal data to external servers. All data is stored exclusively on your device.</strong>
+                </p>
+            </div>
+
+            <div class="content-section">
+                <h2>1. Information We Handle</h2>
+                <p>The App may handle the following types of information:</p>
+                <ul>
+                    <li><strong>Clothing item data:</strong> Name, category, color, material, season, and other attributes</li>
+                    <li><strong>Clothing images:</strong> Photos taken or selected from the photo library by the user</li>
+                    <li><strong>Outfit history &amp; favorites:</strong> Records of outfits created by the user</li>
+                    <li><strong>App settings:</strong> Language, theme, notification preferences, etc.</li>
+                </ul>
+                <p>All of this information is stored only on your device using SwiftData local storage.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>2. No Data Transmission</h2>
+                <p>The App does not transmit any of the following to external parties:</p>
+                <ul>
+                    <li>Personally identifiable information (name, email, phone number, etc.)</li>
+                    <li>Location data</li>
+                    <li>Device identifiers (advertising ID, etc.)</li>
+                    <li>Clothing images or outfit data</li>
+                </ul>
+                <p>The App does not use any advertising networks, analytics services, or third-party tracking tools.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>3. Camera &amp; Photo Library Access</h2>
+                <p>
+                    The App may request access to your camera or photo library to allow you to add images of clothing items. Any images obtained are stored solely on your device and are never transmitted externally. You can modify these permissions at any time in the iOS Settings app.
+                </p>
+            </div>
+
+            <div class="content-section">
+                <h2>4. Data Storage &amp; Deletion</h2>
+                <p>
+                    All data within the App is stored locally on your device. Uninstalling the App will permanently delete all associated data. The Developer has no means of accessing your data.
+                </p>
+            </div>
+
+            <div class="content-section">
+                <h2>5. iCloud Backup</h2>
+                <p>
+                    App data may be included in iOS standard backups (iCloud Backup). You can manage iCloud backup settings in the iOS Settings app. Data stored in iCloud is governed by Apple's Privacy Policy.
+                </p>
+            </div>
+
+            <div class="content-section">
+                <h2>6. Children's Privacy</h2>
+                <p>
+                    The App is not directed at children under the age of 13, and we do not knowingly collect personal information from children under 13.
+                </p>
+            </div>
+
+            <div class="content-section">
+                <h2>7. Changes to This Policy</h2>
+                <p>
+                    This Privacy Policy may be updated without prior notice. When significant changes are made, we will notify users through an app update or by posting on this page.
+                </p>
+            </div>
+
+            <div class="content-section">
+                <h2>8. Contact Us</h2>
+                <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
+                <ul>
+                    <li><strong>Developer:</strong> TNLiner</li>
+                    <li><strong>Email:</strong> <a href="mailto:tnliner.support@gmail.com">tnliner.support@gmail.com</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div><!-- /card -->
+
+    <div class="footer-note">
+        Cloda &mdash; Your Digital Wardrobe
+    </div>
+
+</div><!-- /container -->
+
+<script>
+    function setLang(lang) {
+        document.documentElement.className = 'lang-' + lang;
+        document.documentElement.lang = lang;
+        document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+        document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const userLang = navigator.language || navigator.userLanguage;
+        if (userLang && !userLang.startsWith('ja')) {
+            setLang('en');
+        }
+    });
+</script>
+</body>
+</html>
