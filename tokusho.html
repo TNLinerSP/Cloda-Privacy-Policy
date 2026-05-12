@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>特定商取引法に基づく表記 | Cloda</title>
+  <style>
+    :root {
+      --bg: #F5F5F5;
+      --text: #111111;
+      --accent: #B2653B;
+      --accent2: #BA8530;
+      --muted: #666666;
+      --border: #DDDDDD;
+      --card: #FFFFFF;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "ヒラギノ角ゴシック", sans-serif;
+      line-height: 1.8;
+      padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .app-name {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.02em;
+    }
+
+    /* Language toggle */
+    .lang-toggle {
+      display: flex;
+      align-items: center;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 3px;
+      gap: 0;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .lang-btn {
+      padding: 5px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: background 0.2s, color 0.2s;
+      color: var(--muted);
+    }
+
+    .lang-btn.active {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 36px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      margin-bottom: 24px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    tr {
+      border-bottom: 1px solid var(--border);
+    }
+
+    tr:last-child {
+      border-bottom: none;
+    }
+
+    th {
+      width: 36%;
+      padding: 16px 20px;
+      text-align: left;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--muted);
+      vertical-align: top;
+      background: #FAFAFA;
+    }
+
+    td {
+      padding: 16px 20px;
+      font-size: 14px;
+      line-height: 1.7;
+      vertical-align: top;
+    }
+
+    .note {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 16px;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 48px;
+      font-size: 13px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 32px 16px 60px;
+      }
+
+      h1 {
+        font-size: 21px;
+      }
+
+      th {
+        width: 40%;
+        font-size: 13px;
+        padding: 14px 14px;
+      }
+
+      td {
+        font-size: 13px;
+        padding: 14px 14px;
+      }
+    }
+
+    /* Language visibility */
+    .ja, .en { display: none; }
+    body.lang-ja .ja { display: block; }
+    body.lang-en .en { display: block; }
+    body.lang-ja .ja-inline { display: inline; }
+    body.lang-en .en-inline { display: inline; }
+    .ja-inline, .en-inline { display: none; }
+
+    td .ja, td .en {
+      display: none;
+    }
+    body.lang-ja td .ja { display: block; }
+    body.lang-en td .en { display: block; }
+  </style>
+</head>
+<body class="lang-ja">
+<div class="container">
+
+  <header>
+    <div class="app-name">Cloda</div>
+    <div class="lang-toggle" id="langToggle" role="button" aria-label="言語切り替え">
+      <div class="lang-btn active" id="btnJa">日本語</div>
+      <div class="lang-btn" id="btnEn">English</div>
+    </div>
+  </header>
+
+  <h1>
+    <span class="ja-inline">特定商取引法に基づく表記</span>
+    <span class="en-inline">Act on Specified Commercial Transactions</span>
+  </h1>
+  <p class="subtitle">
+    <span class="ja-inline">最終更新日：2026年5月9日</span>
+    <span class="en-inline">Last updated: May 9, 2026</span>
+  </p>
+
+  <div class="card">
+    <table>
+      <tr>
+        <th><span class="ja-inline">販売業者</span><span class="en-inline">Seller</span></th>
+        <td>
+          <div class="ja">Suguru Kasebe</div>
+          <div class="en">Suguru Kasebe</div>
+        </td>
+      </tr>
+      <tr>
+        <th><span class="ja-inline">所在地</span><span class="en-inline">Address</span></th>
+        <td>
+          <div class="ja">
+            請求があった場合、遅滞なく開示します。<br>
+            お問い合わせは下記メールアドレスまでご連絡ください。
+          </div>
+          <div class="en">
+            Will be disclosed without delay upon request.<br>
+            Please contact us via the email address below.
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th><span class="ja-inline">連絡先</span><span class="en-inline">Contact</span></th>
+        <td>
+          <div class="ja">tnliner.support@gmail.com</div>
+          <div class="en">tnliner.support@gmail.com</div>
+        </td>
+      </tr>
+      <tr>
+        <th><span class="ja-inline">販売価格</span><span class="en-inline">Price</span></th>
+        <td>
+          <div class="ja">
+            各サブスクリプションプランの価格は、App Store の購入画面に税込価格で表示されます。
+          </div>
+          <div class="en">
+            Prices for each subscription plan are displayed tax-inclusive on the App Store purchase screen.
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th><span class="ja-inline">支払い方法</span><span class="en-inline">Payment Method</span></th>
+        <td>
+          <div class="ja">
+            Apple Inc. が提供する App Store の決済システムを通じてお支払いいただきます。クレジットカード、Apple Pay 等、App Store が対応する支払い方法をご利用いただけます。
+          </div>
+          <div class="en">
+            Payment is processed through Apple Inc.'s App Store payment system. You may use credit cards, Apple Pay, and other methods supported by the App Store.
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th><span class="ja-inline">支払い時期</span><span class="en-inline">Payment Timing</span></th>
+        <td>
+          <div class="ja">
+            購入確定時に課金されます。サブスクリプションは各更新期間の開始時に自動的に課金されます。無料トライアルがある場合、トライアル終了の24時間前までにキャンセルしない限り、有料プランへ自動移行されます。
+          </div>
+          <div class="en">
+            You will be charged at the time of purchase confirmation. Subscriptions are automatically charged at the beginning of each renewal period. If a free trial is offered, it will automatically convert to a paid plan unless cancelled at least 24 hours before the trial ends.
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th><span class="ja-inline">サービス提供時期</span><span class="en-inline">Service Delivery</span></th>
+        <td>
+          <div class="ja">
+            決済完了後、直ちにご利用いただけます。
+          </div>
+          <div class="en">
+            Available immediately after payment is completed.
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th><span class="ja-inline">解約方法</span><span class="en-inline">Cancellation</span></th>
+        <td>
+          <div class="ja">
+            iPhone/iPad の「設定」→「Apple ID」→「サブスクリプション」からいつでも解約できます。解約後も現在の契約期間終了日まではサービスをご利用いただけます。期間途中での返金はできません。
+          </div>
+          <div class="en">
+            You can cancel at any time via iPhone/iPad "Settings" → "Apple ID" → "Subscriptions". After cancellation, you may continue to use the service until the end of the current billing period. No refunds are issued for partial periods.
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th><span class="ja-inline">返金ポリシー</span><span class="en-inline">Refund Policy</span></th>
+        <td>
+          <div class="ja">
+            返金は Apple Inc. のポリシーに準じます。返金をご希望の場合は <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> よりお申し込みください。
+          </div>
+          <div class="en">
+            Refunds are subject to Apple Inc.'s refund policy. To request a refund, please visit <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>.
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th><span class="ja-inline">動作環境</span><span class="en-inline">Requirements</span></th>
+        <td>
+          <div class="ja">iOS 18.0 以上</div>
+          <div class="en">iOS 18.0 or later</div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <p class="note">
+    <span class="ja-inline">
+      ※ 本アプリの販売・決済は Apple Inc. を通じて行われます。Apple Inc. の利用規約については
+      <a href="https://www.apple.com/legal/internet-services/itunes/jp/terms.html" target="_blank" rel="noopener">App Store 利用規約</a> をご確認ください。
+    </span>
+    <span class="en-inline">
+      * Sales and payments for this app are processed through Apple Inc. Please refer to the
+      <a href="https://www.apple.com/legal/internet-services/itunes/us/terms.html" target="_blank" rel="noopener">App Store Terms of Service</a> for Apple's terms.
+    </span>
+  </p>
+
+  <footer>
+    &copy; 2026 <span class="ja-inline">Cloda</span><span class="en-inline">Cloda</span>
+  </footer>
+
+</div>
+
+<script>
+  (function () {
+    var body = document.body;
+    var btnJa = document.getElementById('btnJa');
+    var btnEn = document.getElementById('btnEn');
+
+    function setLang(lang) {
+      body.className = 'lang-' + lang;
+      btnJa.className = 'lang-btn' + (lang === 'ja' ? ' active' : '');
+      btnEn.className = 'lang-btn' + (lang === 'en' ? ' active' : '');
+      localStorage.setItem('cloda-lang', lang);
+    }
+
+    var saved = localStorage.getItem('cloda-lang');
+    if (saved === 'en') {
+      setLang('en');
+    } else if (!saved) {
+      var browserLang = navigator.language || navigator.userLanguage || 'ja';
+      setLang(browserLang.startsWith('ja') ? 'ja' : 'en');
+    }
+
+    document.getElementById('langToggle').addEventListener('click', function () {
+      setLang(body.className === 'lang-ja' ? 'en' : 'ja');
+    });
+  })();
+</script>
+</body>
+</html>
